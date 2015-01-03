@@ -1,4 +1,4 @@
-defmodule Exjira.Mixfile do
+defmodule ExKira.Mixfile do
   use Mix.Project
 
   def project do
@@ -13,7 +13,7 @@ defmodule Exjira.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [applications: [:logger],
-     mod: {Exjira, []}]
+     mod: {ExJira, []}]
   end
 
   # Dependencies can be Hex packages:
