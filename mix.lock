@@ -1,0 +1,9 @@
+%{"exactor": {:hex, :exactor, "0.7.0"},
+  "exjsx": {:hex, :exjsx, "3.1.0"},
+  "exvcr": {:hex, :exvcr, "0.3.7"},
+  "hackney": {:hex, :hackney, "0.14.3"},
+  "httpoison": {:hex, :httpoison, "0.5.0"},
+  "idna": {:hex, :idna, "1.0.1"},
+  "jsx": {:hex, :jsx, "2.4.0"},
+  "meck": {:hex, :meck, "0.8.2"},
+  "oauth": {:git, "git://github.com/tim/erlang-oauth.git", "2ee206ea921722893200a0ad534c6b6130233325", []}}

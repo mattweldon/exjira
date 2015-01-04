@@ -1,4 +1,4 @@
-defmodule ExKira.Mixfile do
+defmodule ExJira.Mixfile do
   use Mix.Project
 
   def project do
@@ -26,6 +26,9 @@ defmodule ExKira.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    []
+    [
+      {:oauth, github: "tim/erlang-oauth"},
+      {:exvcr, "~> 0.3", only: [:dev, :test]}
+    ]
   end
 end
