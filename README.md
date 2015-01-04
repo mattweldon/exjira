@@ -7,7 +7,9 @@ A non-trivial project to help me get started using Elixir - Currently WIP.
 
 ### Usage
 
-1. Add the following to the deps section in `mix.exs`.
+#### 1. Add dependencies
+
+Add the following to the deps section in `mix.exs`.
 
 ```elixir
 defp deps do
@@ -18,8 +20,13 @@ defp deps do
 end
 ```
 
-2. Use `ExJira.configure` to setup the JIRA OAuth parameters.
-3. Call the functions in the ExJira module (e.g. `ExJira.projects` to return all projects or `ExJira.project("KEY")` to return a specifc one).
+#### 2. Setup OAuth parameters
+
+Use `ExJira.configure` to setup the JIRA OAuth parameters. See the Configuration section below for further details.
+
+#### 3. Access JIRA endpoints
+
+Call the functions in the ExJira module (e.g. `ExJira.projects` to return all projects or `ExJira.project("KEY")` to return a specifc one).
 
 
 ### Configuration
@@ -41,11 +48,11 @@ config :ex_jira, [
 #### Across the application at runtime
 
 ```elixir
-ExTwitter.configure([consumer_key: "", ...])
+ExJira.configure([consumer_key: "", ...])
 ```
 
 #### For the current process at runtime
 
 ```elixir
-ExTwitter.configure(:process, [consumer_key: "", ...])
+ExJira.configure(:process, [consumer_key: "", ...])
 ```
