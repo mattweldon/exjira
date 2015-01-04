@@ -40,8 +40,8 @@ In `config/config.exs` add the following:
 ```elixir
 config :ex_jira, [
   site: "http://youraccount.atlassian.net",
-  private_key_file: "private_key.pem"   # Wherever the private key for the Application Link lives.
-  consumer_key: ""                      # Whatever has been setup2 in the Application Links section in Jira.
+  private_key_file: "private_key.pem"
+  consumer_key: ""
 ]
 ```
 
