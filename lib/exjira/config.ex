@@ -6,29 +6,15 @@ defmodule ExJira.Config do
   @doc """
   Get OAuth config values.
   """
-  def get do
-    get(current_scope)
-  end
-
-  def get(:global) do
-    Application.get_env(:ex_jira, :oauth, nil)
-  end
-
-  def get(:process) do
-    Process.get(:_ex_jira_oauth, nil)
-  end
+  def get, do: get(current_scope)
+  def get(:global), do: Application.get_env(:ex_jira, :oauth, nil)
+  def get(:process), do: Process.get(:_ex_jira_oauth, nil)
 
   @doc """
   Set OAuth config values.
   """
-  def set(value) do
-    set(current_scope, value)
-  end
-
-  def set(:global, value) do
-    Application.put_env(:ex_jira, :oauth, value)
-  end
-
+  def set(value), do: set(current_scope, value)
+  def set(:global, value), do: Application.put_env(:ex_jira, :oauth, value)
   def set(:process, value) do
     Process.put(:_ex_jira_oauth, value)
     :ok
