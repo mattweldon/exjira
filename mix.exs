@@ -12,7 +12,7 @@ defmodule ExJira.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger],
+    [applications: [:logger, :dotenv],
      mod: {ExJira, []}]
   end
 
@@ -28,7 +28,8 @@ defmodule ExJira.Mixfile do
   defp deps do
     [
       {:oauth, github: "tim/erlang-oauth"},
-      {:exvcr, "~> 0.3", only: [:dev, :test]}
+      {:exvcr, "~> 0.3", only: [:dev, :test]},
+      {:dotenv, "~> 0.0.4"}
     ]
   end
 end
