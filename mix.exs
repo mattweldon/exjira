@@ -28,6 +28,7 @@ defmodule ExJira.Mixfile do
   defp deps do
     [
       {:oauth, github: "tim/erlang-oauth"},
+      {:poison, "~> 1.3"},
       {:exvcr, "~> 0.3", only: [:dev, :test]},
       {:dotenv, "~> 0.0.4"}
     ]
