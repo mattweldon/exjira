@@ -11,7 +11,7 @@ defmodule ExJira.API.Base do
   end
 
     defp request_url(site, path) do
-      "#{site}/rest/api/2/#{path}" |> to_char_list
+      "#{site}/#{path}" |> to_char_list
     end
 
     defp parse_result(result) do

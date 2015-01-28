@@ -6,7 +6,7 @@ defmodule ExJira.API.Issues do
   import ExJira.API.Base
 
   def find(id) do
-    request(:get, "issue/#{id}")
+    request(:get, "rest/api/2/issue/#{id}")
   end
 
 end

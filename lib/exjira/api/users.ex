@@ -6,7 +6,7 @@ defmodule ExJira.API.Users do
   import ExJira.API.Base
 
   def find(username) do
-    request(:get, "user", [username: username])
+    request(:get, "rest/api/2/user", [username: username])
   end
 
 end
