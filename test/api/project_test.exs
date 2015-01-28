@@ -13,6 +13,7 @@ defmodule ProjectTest do
 
   test "all returns summary info about each project" do 
     project = ExJira.API.Projects.all |> List.first
+    
     assert project.avatarUrls != ""
     assert project.id != ""
     assert project.key != ""
@@ -21,6 +22,7 @@ defmodule ProjectTest do
 
   test "find returns full info for a project using a project key" do
     project = ExJira.API.Projects.find("FIVE")
+
     assert project.avatarUrls != ""
     assert project.id != ""
     assert project.key == "FIVE"
@@ -29,6 +31,7 @@ defmodule ProjectTest do
 
   test "find returns full info for a project using a project id" do
     project = ExJira.API.Projects.find("10223")
+
     assert project.avatarUrls != ""
     assert project.id == "10223"
     assert project.key != ""
