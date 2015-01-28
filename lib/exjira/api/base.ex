@@ -14,9 +14,9 @@ defmodule ExJira.API.Base do
       "#{site}/rest/api/2/#{path}" |> to_char_list
     end
 
-      defp parse_result(result) do
-        {:ok, {_response, header, body}} = result
-        ExJira.Json.decode!(body)
-      end
+    defp parse_result(result) do
+      {:ok, {_response, header, body}} = result
+      ExJira.Json.decode!(body)
+    end
 
 end

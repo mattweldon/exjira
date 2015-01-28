@@ -23,7 +23,7 @@ defmodule ExJira.OAuthTest do
     assert ExJira.OAuth.get_access_token == :ok
   end
 
-  test "access token request returns :ok" do
+  test "access token request adds keys to config store" do
     ExJira.OAuth.get_request_token
     ExJira.OAuth.get_access_token
 

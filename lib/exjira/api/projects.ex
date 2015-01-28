@@ -9,4 +9,8 @@ defmodule ExJira.API.Projects do
     request(:get, "project")
   end
 
+  def find(id) do
+    request(:get, "project/#{id}")
+  end
+
 end
