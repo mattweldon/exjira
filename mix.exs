@@ -5,7 +5,9 @@ defmodule ExJira.Mixfile do
     [app: :exjira,
      version: "0.0.1",
      elixir: "~> 1.0",
-     deps: deps]
+     deps: deps,
+     description: description,
+     package: package]
   end
 
   # Configuration for the OTP application
@@ -32,5 +34,17 @@ defmodule ExJira.Mixfile do
       {:exvcr, "~> 0.3", only: [:dev, :test]},
       {:dotenv, "~> 0.0.4"}
     ]
+  end
+
+  defp description do
+    """
+    JIRA client library for Elixir
+    """
+  end
+
+  defp package do
+    [ contributors: ["mattweldon"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/mattweldon/exjira"} ]
   end
 end
