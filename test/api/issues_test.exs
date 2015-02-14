@@ -23,4 +23,12 @@ defmodule IssuesTest do
     assert issue.fields.summary != ""
   end
 
+  test "in open sprints returns issues in open sprints" do
+    results = ExJira.API.Issues.in_open_sprints
+
+    issue_count = results.issues |> Enum.count
+
+    assert issue_count > 0
+  end
+
 end
